@@ -81,9 +81,9 @@ flowchart TB
     V["Modules VBA & Macros<br/>logique et automatisation"]
 
     F --> Q --> T
-    V -. orchestrent .-> F
-    V -. exécutent .-> Q
-    V -. lisent / écrivent .-> T
+    V -.->|"orchestrent"| F
+    V -.->|"exécutent"| Q
+    V -.->|"lisent / écrivent"| T
 ```
 
 Cette **architecture en couches** — données, accès/transformation, présentation, logique — est un fil rouge de toute application bien conçue. Le chapitre 16 (section 16.8) montre comment la formaliser davantage (séparation DAL / BLL / UI) dans des applications d'envergure.
